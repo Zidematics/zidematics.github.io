@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.hire-me{
+    min-width: 270px;
+    min-height: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: rgb(3, 3, 59);
+    object-fit: contain;
+    box-shadow: 0px 2px 15px 2px black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+}
+.hire-me #back-button{
+    padding: 6px;
+    background-color: transparent;
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hire-me #back-button:hover{
+    background-color: rgba(3, 3, 243, 0.466);
+}
+.hire-me #back-button:focus img{
+    width: 13px;
+    height: 17px;
+}
+.hire-me .hire-me-form{
+    width: 70%;
+    max-width: 400px;
+    height: 220px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 20px 0px rgba(255, 255, 255, 0.137);
+    background-color: #f5eaea10;
+    backdrop-filter: blur(100px);
+    padding: auto;
+}
+.hire-me .hire-me-form label{
+    font-size: 13px;
+    font-family: sans-serif;
+    line-height: 33px;
+    color: rgb(207, 206, 206);
+    letter-spacing: 1px;
+}
+.hire-me .hire-me-form #input{
+    background-color: white;
+    border: none;
+    outline: transparent;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 1px;
+    color: rgb(65, 63, 63);
+    font-size: 13px;
+    height: 22px;
+    width: 150px;
+    max-width: 100%;
+    margin: auto;
+    transition: .3s ease;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+.hire-me .hire-me-form #input:hover{
+    box-shadow: 1px 1px 9px 2px rgba(255, 255, 255, 0.504);
+}
+.hire-me .hire-me-form #input:focus{
+    background-color: rgba(255, 255, 255, 0.0);
+    box-shadow: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: white;
+    content: '';
+    border-bottom: 2px solid rgba(255, 255, 255, 0.127);
+}
+.hire-me .hire-me-form #input:focus::placeholder{
+    color: rgba(201, 200, 130, 0.671);
+}
+.hire-me .hire-me-form #input::placeholder{
+    color: rgba(0, 0, 0, 0.815);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.hire-me .hire-me-form input[type=submit]{
+    border-radius: 5px;
+    box-shadow: inset 0.4px 0.4px 3.2px 1px rgba(255, 255, 255, 0.099);
+    padding: 2.5px 10px;
+    background-color: rgb(73, 73, 73);
+    margin-top: 20px;
+    margin-left: 90px;
+    border: 1px solid rgba(7, 4, 4, 0.301);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: sans-serif;
+    box-shadow: 1px 0px 10px 1px rgba(189, 185, 185, 0.144);
+    cursor: pointer;
+    transition: .3s ease;
+    letter-spacing: 0.029rem;
+}
+.hire-me .hire-me-form input[type=submit]:focus{
+    background-color: rgb(73, 73, 73);
+    box-shadow: none;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.575);
+}
+.hire-me .hire-me-form input[type=submit]:hover{
+    background-color: rgb(73, 73, 73, 0.6);
+}    
+.hire-me .terms{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    bottom: 25px;
+}
+.hire-me .terms h6{
+    text-align: center;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.986);
+}
+.hire-me .terms h6 a{
+    color: rgb(128, 128, 253);
+    line-gap-override: 10px;
+}
+.maininfo{
+    width: 100%;
+    height: auto;
+    min-height: 170px;
+    position: relative;
+    bottom: 0px;
+}
+.maininfo .maininfo-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.maininfo .maininfo-socials h3{
+    font-size: 19px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    padding-bottom: 13px;
+    font-optical-sizing: black;
+}    
+.maininfo .maininfo-socials .svgs{
+    width: 90%;
+    height: auto;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: -25px;
+}
+.maininfo .maininfo-socials .svgs table{
+    border-spacing: 20px;
+}
+.maininfo .maininfo-socials .svgs table tr td a img{
+    background-color: rgba(128, 128, 128, 0.349);
+    border-radius: 50%;
+    padding: 3px;
+}
+.maininfo .maininfo-socials .svgs table tr td a img:hover{
+    background-color: rgb(151, 150, 150);
+}
+.maininfo .contact-me{
+    padding: 2px 20px 4px 20px;
+    background-color: rgba(173, 216, 230, 0.292);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 500px;
+    margin-top: -10px;
+}
+.maininfo .contact-me p{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: rgb(5, 5, 5);
+    text-align: center;
+}
+.maininfo .contact-me p span{
+    font-weight: 700;
+    cursor: pointer;
+}
+.maininfo .contact-me p span a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.maininfo .contact-me p span a:visited{
+    color: red;
+}
+.maininfo .copy{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.maininfo .copy h6{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 13px;
+}
