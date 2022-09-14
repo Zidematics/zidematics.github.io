@@ -2,6 +2,18 @@
 *{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 25px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(rgb(1, 1, 49),  rgb(157, 157, 248));
+    border-radius: 10px;
+    border: 4px double white;
+}
 body{
     padding: 0;
     margin: 0;
@@ -158,7 +170,7 @@ body{
     z-index: -2;
     width: 100%;
     height: 0px;
-    top: -448px;
+    top: -10000%;
     right: 3vw;
     background-color: rgba(98, 98, 253, 0.920);
     padding: 18vh 0rem 25vh 0rem;
@@ -170,7 +182,7 @@ body{
     align-items: center;
     display: block;
     box-shadow: 1px 5px 10px 0px rgba(54, 54, 54, 0.548);
-    transition: .8s ease;
+    transition: 1.4s ease-out;
     position: absolute;
     left: 0px;
 }
@@ -227,6 +239,7 @@ body{
     left: 0px;
     right: 3vw;
     height: 100vh;
+    transition: 1s ease-out;
 }
 /* End Nav Bar */
 /* Main Body */
@@ -241,7 +254,7 @@ body{
     position: absolute;
 }
 .main-body .fixed-bar{
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -524,7 +537,7 @@ body{
 }
 .info button{
     margin-left: -21px;
-    margin-top: 2px;
+    margin-top: 3px;
     position: absolute;
 }
 .services{
@@ -539,9 +552,9 @@ body{
 .services h1{
     color: white;
     text-align: center;
-    font-size: 4vmin;
+    font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
+    text-transform: capitalize;
     position: relative;
     top: 20px;
     bottom: 20px;
@@ -582,6 +595,7 @@ body{
     width: 60%;
     height: auto;
     margin: auto;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -639,7 +653,7 @@ body{
 } 
 .services .projects-items .item figure figcaption{
     background-color: white;
-    color: rgb(3, 3, 59);
+    color: rgb(2, 2, 77);
     width: 70vw;
     max-width: 300px;
     margin-top: 2px;
@@ -653,7 +667,7 @@ body{
     text-transform: capitalize;
     word-spacing: 5px;
     letter-spacing: 1px;
-    font-family: sans-serif;
+    font-family: 'Poppins' sans-serif ;
     box-shadow: inset 1px 1px 7px 0px rgba(0, 0, 255, 0.322);
     border: 1px solid white;
     font-weight: 600;
@@ -672,6 +686,39 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
     color: rgb(97, 97, 253);
     font-weight: 100;
+}
+.services .projects-items .item figure figcaption a::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: '';
+    animation: transit 4s linear 0s infinite normal forwards;
+    z-index: -1;
+}
+.services .projects-items .item figure figcaption a:focus{
+    background-color: blue;
+    backface-visibility: visible;
+    color: #ffffff;
+}
+@keyframes transit{
+    0%{
+        background-color: white;
+    }
+    25%{
+        background-color: rgb(219, 219, 255);
+    }
+    50%{
+        background-color: rgb(190, 190, 248);
+    }
+    75%{
+        background-color: rgb(219, 219, 255);
+    }
+    100%{
+        background-color: white;
+        width: 100%;
+    }
 }
 .services .projects-items figure .pop-up{
     position: absolute;
@@ -713,6 +760,187 @@ body{
     color: rgba(7, 0, 0, 0.178);
     transition: 1.5s ease-in-out
 }
+.wave{
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wave .stationary{
+    background-color: rgb(145, 145, 248);
+    height: 350px;
+    width: 100%;
+    position: relative;
+    top: -250px;
+}
+.wave .stationary_info{
+    position: absolute;
+    top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wave .stationary_info h3{
+    text-align: center;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: 'Poppins' sans-serif;
+    letter-spacing: 1px;
+    background-image: radial-gradient(white 50px, rgb(1, 1, 102));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0.2px rgb(5, 0, 0);
+}
+.wave .stationary-main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    gap: 20px;
+}
+.wave .stationary-main .stationary_feedback{
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    height: 160px;
+    background-color: rgb(250, 249, 249);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid rgba(238, 235, 235, 0.966);
+    border-radius: 3px;
+    box-shadow: 4px 4px 10px 0px rgba(156, 156, 156, 0.397);
+}
+.wave .stationary-main .stationary_feedback:hover{
+    margin-top: -20px;
+    transition: 0.5s ease-in-out;
+}
+.wave .stationary-main .stationary_feedback .stationary1{
+    position: relative;
+    width: 50%;
+    padding-left: 5px;
+}
+.wave .stationary-main .stationary_feedback .stationary1 .image-name{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wave .stationary-main .stationary_feedback .stationary1 h4{
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 500;
+    color: rgb(49, 49, 58);
+}
+.wave .stationary-main .stationary_feedback .stationary1 p{
+    position: relative;
+    font-size: 10px;
+    padding-left: 3px;
+    color: grey;
+    top: -6px;
+}
+.wave .stationary-main .stationary_feedback .comment{
+    position: relative;
+    width: 50%;
+    padding-right: 5%;
+}
+.wave .stationary-main .stationary_feedback .comment p{
+    font-size: 14px;
+    text-align: left;
+    font-weight: 300;
+    color: grey;
+}
+.wave svg{
+    top: -250px;
+    position: relative;
+    z-index: -1;
+}
+.team-member{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.team-member h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: rgb(1, 1, 49);
+}
+.member{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+}
+@media only screen and (min-width: 500px){
+    .member{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+}
+.team-member .member1{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 220px;
+    height: 280px;
+    overflow: hidden;
+}
+.team-member .member1:hover img{
+    transform: scale(0.98);
+    transition: transform .5s;
+}
+ .member1 img{
+    width: 150%;
+    height: 320px;
+    transform: scale(1);
+    position: absolute;
+    transition: .5s ease-in-out;
+ }   
+.team-member .member1 .member-port{
+    position: absolute;
+    background-color: rgba(1, 1, 66, 0.527);
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    height: 100px;
+}
+.member-port h3{
+    font-size: 15px;
+    font-family: 'Poppins' sans-serif;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+.member-port p{
+    text-transform: capitalize;
+    color: white;
+    font-size: 13px;
+    margin-top: -5px;
+}
 @media only screen and (max-width: 400px){
     .nav-bar .nav-list ul li a{
         font-size: .5rem;
@@ -752,7 +980,7 @@ body{
         transition: .5s ease-in-out;
     }
 }
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 1000px){
     #nav-bar{
         position: fixed;
     }
@@ -863,7 +1091,10 @@ body{
         box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.556);
     }
     .services h1{
-        font-size: 22px;
+        font-size: 26px;
+    }
+    .services hr{
+        top: 20px;
     }
     .services .projects-items{
         display: flex;
@@ -873,11 +1104,12 @@ body{
         justify-content: center;
         margin: auto;
         position: relative;
+        top: 30px;
     }
     .services .projects-items .item{
         position: relative;
-        top: 10px;
-        bottom: 0px;
+        top: 0px;
+        bottom: 10px;
         border: none;
     }
     .services .projects-items .item:last-child{
@@ -891,15 +1123,91 @@ body{
         max-width: 300px;
         height: 18vw;
     }
+    .services .projects-items figure .pop-up{
+        width: 23vw;
+    }
+    .services .projects-items figure:hover .pop-up{
+        width: 23vw;
+        height: 18vw;
+    }
     .services .projects-items figure .mini::after{
         width: 20vw;
         height: 16vw;
     }
     .services .projects-items .item figure figcaption{
         width: 23vw;
+        font-size: 18px;
+        padding: 7px 0px;
     }
     .services .projects-items .item figure figcaption a{
         top: -32px;
         right: 8%;
+    }
+    .wave .stationary_info{
+        top: -10px;
+        align-items: flex-end;
+        justify-content: left;
+        left: 11%;
+    }
+    .wave .stationary_info h3{
+        font-size: 42px;
+    }
+    .wave .stationary-main{
+        flex-direction: row; 
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        padding: 10px;
+        top: 140px;
+    }
+    .wave .stationary-main .stationary_feedback{
+        width: 100%;
+        height: 180px;
+        max-width: 500px;
+        padding: 10px;
+    }
+    .wave .stationary-main .stationary_feedback .stationary1{
+        padding-left: 20px;
+    }
+    .wave .stationary-main .stationary_feedback .stationary1 h4{
+        font-size: 20px;
+    }
+    .wave .stationary-main .stationary_feedback .stationary1 img{
+        width: 120px;
+    }
+    .wave .stationary-main .stationary_feedback .stationary1 p{
+        font-size: 13px;
+    }
+    .wave .stationary-main .stationary_feedback .comment{
+        width: 65%;
+        padding-right: 10%;
+    }
+    .wave .stationary-main .stationary_feedback .comment p{
+        font-size: 18px;
+    }
+    .team-member{
+        top: -160px;
+    }
+    .team-member .member1{
+        min-width: 280px;
+        height: 360px;
+    }
+    .team-member .member1 img{
+        height: 370px;
+    }
+    .team-member .member1 .member-port{
+        height: 150px;
+    }
+    .member-port h3{
+        font-size: 20px;
+    }
+    .member-port p{
+        font-size: 16px;
+    } 
+    .member{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
     }
 }
