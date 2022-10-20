@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300&family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section id="nav-bar" class="container">
+<body onload="myFonction()">
+    <section id="nav-bar" class="container" onclick="myFunction()">
         <header class="nav-bar">
             <div class="brand"><img src="images\moren 2.png" alt="josuii logo" width="40px" height="60px"><h3>Zidem</h3></div>
             <a href="tel:+2349079810777" type="button" class="contact" id="contact">Contact
@@ -31,7 +31,7 @@
                     <li style="border: none;"><a href="#services"><i class="material-symbols-outlined" style="font-size: 20px; position: relative; display: flex; justify-content: center; align-items: center; padding-bottom: 5px;">design_services</i>Services</a></li>
                     <li><a href="#" target="blank" class="rendy"><i class="material-symbols-outlined" style="font-size: 20px; position: relative; display: flex; justify-content: center; align-items: center; padding-bottom: 5px;">info</i>About Us</a></li>
                     <li><a href="form.html"><i class="material-symbols-outlined" style="font-size: 20px; position: relative; display: flex; justify-content: center; align-items: center; padding-bottom: 5px;">person_3</i>Hire Me</a></li>
-                    <li><a href="me.html" target="blank"><i class="material-symbols-outlined" style="font-size: 20px; position: relative; display: flex; justify-content: center; align-items: center; padding-bottom: 5px;">Search</i>projects</a></li>
+                    <li><a href="me.html" target="blank"><i class="material-symbols-outlined" style="font-size: 20px; position: relative; display: flex; justify-content: center; align-items: center; padding-bottom: 5px; ">work</i>Projects</a></li>
                 </ul>
             </div>
         </header>
@@ -158,12 +158,12 @@
             <div class="member1">
                 <img src="images\emma.jpg" alt="">
                 <div class="member-port">
-                    <h3>Emmanuel Umoren</h3> 
+                    <h3>Emmanuel Umoren</h3>
                     <p>frontend developer</p>
                 </div>
             </div>
             <div class="member1" id="member1">
-                <img src="images\IMG_20220830_101851.jpg" alt="" style="filter: opacity(1); backface-visibility: hidden;">
+              <img src="images\IMG_20220830_101851.jpg" style="filter: opacity(1); backface-visibility: hidden;">
                 <div class="member-port">
                     <h3>San Montserrat</h3>
                     <p>UI/UX Designer</p>
@@ -171,6 +171,12 @@
             </div>
         </div>
     </section>
+    <section id="member2" onclick="pop()">
+        <img src="images\emma.jpg" alt="" id="arm">
+        <img src="images\IMG_20220830_101851.jpg">
+    </section>
     <script src="app.js"></script>
+    </script>
+    <script src="pop.js"></script>
 </body>
 </html>

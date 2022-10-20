@@ -5,6 +5,3 @@ hamburgerIcon.addEventListener('click', () =>{
     navList.classList.toggle('open');
     hamburgerIcon.classList.toggle('active')
 });
-
-localtime = now.toString();
-utctime = now.toGMTString()
