@@ -912,7 +912,7 @@ body{
     transform: scale(0.98);
     transition: transform .5s;
 }
- .member1 img{
+.member1 img{
     width: 150%;
     height: 320px;
     transform: scale(1);
@@ -929,17 +929,56 @@ body{
     height: 100px;
 }
 .member-port h3{
-    font-size: 15px;
     font-family: 'Poppins' sans-serif;
     color: white;
+    font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0px;
 }
 .member-port p{
     text-transform: capitalize;
     color: white;
     font-size: 13px;
     margin-top: -5px;
+}
+.popover{
+    background-color: rgb(1, 1, 63);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+    ;
+}
+.popover img{
+    border-radius: 100%;
+    border: 5px solid rgb(201, 200, 200);
+    box-sizing: border-box;
+}
+#member2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 5, 17, 0.705);
+    position: fixed;
+    z-index: 10000;
+    top: 0px;
+    left: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: display 2s;
+}   
+#member2 img{
+    width: 50%;
+    height: auto;
+    border: 5px solid rgba(255, 255, 255, 0.459);
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.712);
+    position: absolute;
+    transition: visibility 2s;
 }
 @media only screen and (max-width: 400px){
     .nav-bar .nav-list ul li a{
